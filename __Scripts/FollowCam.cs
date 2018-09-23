@@ -20,11 +20,6 @@ public class FollowCam : MonoBehaviour {
         S = this;
         camZ = this.transform.position.z;
     }
-
-    // Use this for initialization
-    void Start () {
-		
-	}
 	
 	void FixedUpdate () {
         Vector3 destination;
@@ -38,7 +33,7 @@ public class FollowCam : MonoBehaviour {
             destination = poi.transform.position;
             if(poi.tag == "Projectile")
             {
-                if (poi.GetComponent<Rigidbody>().IsSleeping())
+                if (poi.GetComponent<Rigidbody>().IsSleeping() || Input.GetMouseButtonDown(0))
                 {
                     poi = null;
                     return;
