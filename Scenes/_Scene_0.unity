@@ -124,6 +124,7 @@ GameObject:
   - component: {fileID: 17519815}
   - component: {fileID: 17519814}
   - component: {fileID: 17519817}
+  - component: {fileID: 17519818}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -207,6 +208,31 @@ MonoBehaviour:
   __________________________________: 0
   poi: {fileID: 0}
   camZ: 0
+--- !u!114 &17519818
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 17519813}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ba1f7a096f51a94db912a77651828a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numClouds: 40
+  cloudPrefabs:
+  - {fileID: 1725229335538430, guid: 8fa56a6fe1100a7469bdf21f4d160c04, type: 2}
+  - {fileID: 1725229335538430, guid: a2e890c31f15d0d41a7a6ca8e5a957ea, type: 2}
+  - {fileID: 1725229335538430, guid: 71709d855e648ac4e8ea80881e891fc8, type: 2}
+  - {fileID: 1725229335538430, guid: 8cccc91fce2dbbb4f87a166bc208441f, type: 2}
+  - {fileID: 1725229335538430, guid: ee18ebf223f87bb4296f0939d89d842d, type: 2}
+  cloudPosMin: {x: -50, y: -5, z: 10}
+  cloudPosMax: {x: 150, y: 100, z: 10}
+  cloudScaleMin: 1
+  cloudScaleMax: 5
+  cloudSpeedMult: 0.5
+  _______________________________________: 0
+  cloudInstances: []
 --- !u!1 &94821152
 GameObject:
   m_ObjectHideFlags: 0
@@ -344,6 +370,34 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 219669985}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &556924867
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 556924868}
+  m_Layer: 0
+  m_Name: CloudAnchor
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &556924868
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 556924867}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1123530694
 GameObject:
   m_ObjectHideFlags: 0
