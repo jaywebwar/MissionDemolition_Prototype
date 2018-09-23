@@ -33,7 +33,7 @@ public class FollowCam : MonoBehaviour {
             destination = poi.transform.position;
             if(poi.tag == "Projectile")
             {
-                if (poi.GetComponent<Rigidbody>().IsSleeping() || Input.GetMouseButtonDown(0))
+                if (poi.GetComponent<Rigidbody>().IsSleeping())
                 {
                     poi = null;
                     return;

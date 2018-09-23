@@ -108,7 +108,7 @@ public class ProjectileLine : MonoBehaviour {
         }
         //add the POI
         AddPoint();
-        if(poi.GetComponent<Rigidbody>().IsSleeping() || Input.GetMouseButtonDown(0)){
+        if(poi.GetComponent<Rigidbody>().IsSleeping()){
             poi = null;
         }
     }

@@ -64,12 +64,19 @@ public class Slingshot : MonoBehaviour {
             projectile.GetComponent<Rigidbody>().velocity = -mouseDelta * velocityMult;
             FollowCam.S.poi = projectile;
             projectile = null;
+            MissionDemolition.ShotFired();
         }
 	}
 
     private void OnMouseEnter()
     {
         launchPoint.SetActive(true);
+        //sets the camera to slingshot to prevent cheating by shooting with castle in view
+        if(FollowCam.S.poi != null)
+        {
+            if (FollowCam.S.poi.tag != "Projectile")
+                FollowCam.S.poi = null;
+        }
         //print("Slingshot: OnMouseEnter");
     }
 

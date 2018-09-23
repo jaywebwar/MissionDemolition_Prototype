@@ -125,6 +125,7 @@ GameObject:
   - component: {fileID: 17519814}
   - component: {fileID: 17519817}
   - component: {fileID: 17519818}
+  - component: {fileID: 17519819}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -233,6 +234,32 @@ MonoBehaviour:
   cloudSpeedMult: 0.5
   _______________________________________: 0
   cloudInstances: []
+--- !u!114 &17519819
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 17519813}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ec5e15914848dc4ea77d527133d2eb5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  castles:
+  - {fileID: 1896384009385352, guid: a907645cedd71ce498a89953ca2c291b, type: 2}
+  - {fileID: 1896384009385352, guid: 3b54fa5186e122f46b669fc6c391bbe7, type: 2}
+  - {fileID: 1896384009385352, guid: bc60cf80afcfc2c4092a863c8cd849fc, type: 2}
+  - {fileID: 1896384009385352, guid: 0ae69511179af714aa292a8b1ee87636, type: 2}
+  levelText: {fileID: 50756763}
+  scoreText: {fileID: 875548935}
+  castlePos: {x: 50, y: -9.5, z: 0}
+  ____________________________________________: 0
+  level: 0
+  levelMax: 0
+  shotsTaken: 0
+  castle: {fileID: 0}
+  mode: 0
+  showing: Slingshot
 --- !u!1 &50756761
 GameObject:
   m_ObjectHideFlags: 0
@@ -367,7 +394,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefabProjectile: {fileID: 1391151311764844, guid: 8b1b7abcf973c3f4f81af74b0aa7ef2f,
     type: 2}
-  velocityMult: 15
+  velocityMult: 10
   ____________________________________: 0
   launchPoint: {fileID: 0}
   launchPos: {x: 0, y: 0, z: 0}
@@ -399,7 +426,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &219669985
 GameObject:
@@ -865,7 +892,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1339318238
 GameObject:
@@ -1021,7 +1048,7 @@ RectTransform:
   - {fileID: 50756762}
   - {fileID: 875548934}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1205,45 +1232,3 @@ MonoBehaviour:
   _____________________________________: 0
   line: {fileID: 0}
   points: []
---- !u!1001 &1795431799
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4134821014902648, guid: 0ae69511179af714aa292a8b1ee87636, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 71.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4134821014902648, guid: 0ae69511179af714aa292a8b1ee87636, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: -9.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4134821014902648, guid: 0ae69511179af714aa292a8b1ee87636, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4134821014902648, guid: 0ae69511179af714aa292a8b1ee87636, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4134821014902648, guid: 0ae69511179af714aa292a8b1ee87636, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4134821014902648, guid: 0ae69511179af714aa292a8b1ee87636, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4134821014902648, guid: 0ae69511179af714aa292a8b1ee87636, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4134821014902648, guid: 0ae69511179af714aa292a8b1ee87636, type: 2}
-      propertyPath: m_RootOrder
-      value: 6
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 0ae69511179af714aa292a8b1ee87636, type: 2}
-  m_IsPrefabAsset: 0
